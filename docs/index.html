@@ -8,88 +8,140 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
+
 <body>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+                <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="showSection('education')">Education</a></li>
+                <li><a href="#" onclick="showSection('contacts')">Contacts</a></li>
+                <div class="animation start-home"></div>
+            </ul>
+        </nav>
+    </div>
     <header>
+        <img src="Emmanuel.jpg" alt="Emmanuel Sifiso Nkosi" class="profile-image">
         <h1>Emmanuel Sifiso Nkosi</h1>
-        <p>Data Science Portfolio</p>
+        <p>Data Scientist</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showSection('about')">About</a></li>
-            <li><a href="#" onclick="showSection('experience')">Experience</a></li>
-            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
-            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-            <li><a href="#" onclick="showSection('education')">Education</a></li>
-            <li><a href="#" onclick="showSection('contacts')">Contacts</a></li>
-        </ul>
-    </nav>
+    <section id="welcome">
+        <h2>Welcome!</h2>
+        
+        <!-- Welcome Paragraph -->
+        <p class="site-description">Thank you for reaching my site, this is where you can learn more about me and my tech journey.</p>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            My skills and educational background in IT System Development have equipped me with a solid understanding of technology frameworks and programming languages, fostering my problem-solving and analytical skills.
-        </p>
-        <p>
-            Furthermore, my accredited Data Science certificate has empowered me with the ability to derive valuable insights from complex datasets, illustrating my proficiency in data manipulation, visualization, and predictive modeling.
-        </p>
     </section>
+    <section id="about">   
+        <!-- About Me and Summary Columns -->
+        <div class="about-summary-columns">
+            <!-- About Me Column -->
+            <div class="about-summary-column">
+                <h3>About Me</h3>
+                <p>
+                    My skills and educational background in IT System Development have equipped me with a solid understanding of technology frameworks and programming languages, fostering my problem-solving and analytical skills.
+                </p>
+            </div>
+    
+            <!-- Summary Column -->
+            <div class="about-summary-column">
+                <h3>Summary</h3>
+                <p>
+                    Furthermore, my accredited Data Science certificate has empowered me with the ability to derive valuable insights from complex datasets, illustrating my proficiency in data manipulation, visualization, and predictive modeling.
+                </p>
+            </div>
+        </div>
+    </section>
+    
 
     <section id="experience" style="display: none;">
-        <h2>Experience</h2>
     
-        <!-- Work Experience: Data Science Intern at BCX -->
-        <div class="experience-entry">
-            <h3>Data Science Intern // BCX (Business Connexion)</h3>
-            <p><strong>August 2023 - current (programme expected to end Nov 2023)</strong></p>
-            <ul>
-                <li>Processed and analyzed large datasets to extract valuable insights.</li>
-                <li>Developed and deployed deep learning models for NLP Speech Sentiment Analysis.</li>
-                <li>Collaborated in a team to fine-tune machine learning models.</li>
-                <li>Produced reports and contributed to project documentation.</li>
-            </ul>
-        </div>
+        <div class="experience-columns">
+            <!-- Data Science Intern at BCX -->
+            <div class="experience-column">
+                <h3>Data Science Intern // BCX (Business Connexion)</h3>
+                <p><strong>August 2023 - current (programme expected to end Nov 2023)</strong></p>
+                <ul>
+                    <li>Processed and analyzed large datasets to extract valuable insights.</li>
+                    <li>Developed and deployed deep learning models for NLP Speech Sentiment Analysis.</li>
+                    <li>Collaborated in a team to fine-tune machine learning models.</li>
+                    <li>Produced reports and contributed to project documentation.</li>
+                </ul>
+            </div>
     
-        <!-- Work Experience: Graphic Design at BP Printing -->
-        <div class="experience-entry">
-            <h3>Graphic Design // BP Printing</h3>
-            <p><strong>April 2022 - November 2022</strong></p>
-            <ul>
-                <li>Designed various marketing materials, including branding and promotional items for clients using CorelDraw, Adobe Illustrator, and Photoshop.</li>
-                <li>Operated a laser cutter machine to accurately prepare and cut fabrics for sewing and tablet branding, maintaining precision in design execution.</li>
-                <li>Operated large-format sublimation printing machines for transferring designs onto fabrics, maintaining color accuracy and print quality.</li>
-            </ul>
-        </div>
+            <!-- Graphic Design at BP Printing -->
+            <div class="experience-column">
+                <h3>Graphic Design // BP Printing</h3>
+                <p><strong>April 2022 - November 2022</strong></p>
+                <ul>
+                    <li>Designed various marketing materials, including branding and promotional items for clients using CorelDraw, Adobe Illustrator, and Photoshop.</li>
+                    <li>Operated a laser cutter machine to accurately prepare and cut fabrics for sewing and tablet branding, maintaining precision in design execution.</li>
+                    <li>Operated large-format sublimation printing machines for transferring designs onto fabrics, maintaining color accuracy and print quality.</li>
+                </ul>
+            </div>
     
-        <!-- Work Experience: IT End User Computing Intern at Davis & Dean -->
-        <div class="experience-entry">
-            <h3>IT End User Computing Intern // Davis & Dean</h3>
-            <p><strong>July 2021 - December 2021</strong></p>
-            <ul>
-                <li>Provided technical support to end-users, resolving hardware and software issues.</li>
-                <li>Assisted in the installation, configuration, and maintenance of IT equipment and systems.</li>
-                <li>Organized Teams meetings, demonstrating my skills with Excel, Outlook, and other Microsoft Office tools.</li>
-            </ul>
+            <!-- IT End User Computing Intern at Davis & Dean -->
+            <div class="experience-column">
+                <h3>IT End User Computing Intern // Davis & Dean</h3>
+                <p><strong>July 2021 - December 2021</strong></p>
+                <ul>
+                    <li>Provided technical support to end-users, resolving hardware and software issues.</li>
+                    <li>Assisted in the installation, configuration, and maintenance of IT equipment and systems.</li>
+                    <li>Organized Teams meetings, demonstrating my skills with Excel, Outlook, and other Microsoft Office tools.</li>
+                </ul>
+            </div>
         </div>
     </section>
+    
     
     <section id="skills" style="display: none;">
-        <h2>Skills</h2>
-        <ul>
-            <li>Data Analysis</li>
-            <li>Natural Language Processing</li>
-            <li>Deep Learning</li>
-            <li>Data Visualization</li>
-            <li>Data Preprocessing</li>
-            <li>Machine Learning</li>
-            <li>Python Programming</li>
-            <li>SQL and Database Management</li>
-            <li>Microsoft PowerBI</li>
-        </ul>
+    
+        <!-- Skills Columns -->
+        <div class="skills-columns">
+            <!-- Soft Skills Column -->
+            <div class="skills-column">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Able to adapt to change</li>
+                    <li>Attention to Detail</li>
+                    <li>Teamwork</li>
+                    <li>Communication</li>
+                    <li>Time management</li>
+                </ul>
+            </div>
+    
+            <!-- Technical Skills Column -->
+            <div class="skills-column">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Data Analysis</li>
+                    <li>Natural Language Processing</li>
+                    <li>Deep Learning</li>
+                    <li>Data Visualization</li>
+                    <li>Data Preprocessing</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </div>
+    
+            <!-- Tools/Resources Column -->
+            <div class="skills-column">
+                <h3>Tools/Resources</h3>
+                <ul>
+                    <li>Python Programming</li>
+                    <li>SQL</li>
+                    <li>Microsoft Power BI</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </div>
     </section>
+    
 
     <section id="projects" style="display: none;">
-            <h2>Projects</h2>
         
             <!-- Project 1: NLP Speech Sentiment Analysis (Audio Emotion Detection) -->
             <div class="project">
@@ -121,39 +173,55 @@
         </section>
 
         <section id="education" style="display: none;">
-            <h2>Education</h2>
-            <div class="education-entry">
-                <h3>Data Science NQF 5</h3>
-                <p><strong>EXPLORE AI Academy
-                <p>Jan 2023 - current (programme expected to end Nov 2023)</p>
-                <ul>
-                    <li>Data visualization</li>
-                    <li>Python and SQL for Data Science</li>
-                    <li>Advance Regression and classification models</li>
-                    <li>Supervised and Unsupervised learning</li>
-                    <li>AWS Cloud foundations</li>
-                </ul>
-            </div>
-            <div class="education-entry">
-                <h3>IT End User Computing</h3>
-                <p><strong>Proserv Institute, South Africa</strong></p>
-                <p>2021</p>
-                <ul>
-                    <li>Mathematical Literacy</li>
-                    <li>Using ICT in the Organisation</li>
-                    <li>Microsoft Office (Spreadsheet Applications - Excel)</li>
-                    <li>Electronic Mail Applications (Outlook and Teams)</li>
-                </ul>
-            </div>
-            <div class="education-entry">
-                <h3>Matric</h3>
-                <p><strong>Vukuzame M.S.T School, South Africa</strong></p>
-                <p>2019</p>
+        
+            <div class="education-columns">
+                <!-- Data Science NQF 5 -->
+                <div class="education-column">
+                    <h3>Data Science NQF 5</h3>
+                    <p><strong>EXPLORE AI Academy</strong></p>
+                    <p>Jan 2023 - current (programme expected to end Nov 2023)</p>
+                    <ul>
+                        <li>Data visualization</li>
+                        <li>Python and SQL for Data Science</li>
+                        <li>Advance Regression and classification models</li>
+                        <li>Supervised and Unsupervised learning</li>
+                        <li>AWS Cloud foundations</li>
+                    </ul>
+                </div>
+        
+                <!-- IT End User Computing -->
+                <div class="education-column">
+                    <h3>IT End User Computing</h3>
+                    <p><strong>Proserv Institute, South Africa</strong></p>
+                    <p>2021</p>
+                    <ul>
+                        <li>Mathematical Literacy</li>
+                        <li>Using ICT in the Organisation</li>
+                        <li>Microsoft Office (Spreadsheet Applications - Excel)</li>
+                        <li>Electronic Mail Applications (Outlook and Teams)</li>
+                    </ul>
+                </div>
+        
+                <!-- Matric -->
+                <div class="education-column">
+                    <h3>Matric</h3>
+                    <p><strong>Vukuzame M.S.T School, South Africa</strong></p>
+                    <p>2019</p>
+                    <ul>
+                        <li>Mathematics</li>
+                        <li>Physical Science</li>
+                        <li>Life Science</li>
+                        <li>CAT (Computer Application Technology)</li>
+                        <li>English (Home Language)</li>
+                        <li>Life Orientation</li>
+                    </ul>
+                </div>
             </div>
         </section>
+        
 
         <section id="contacts" style="display: none;">
-            <h2>Contacts</h2>
+            <h2>Get int touch</h2>
             <ul>
                 <li>
                     <i class="fas fa-envelope"></i> Email: westinarea11@gmail.com
@@ -177,13 +245,26 @@
             for (let i = 0; i < sections.length; i++) {
                 sections[i].style.display = 'none';
             }
-
+    
             const section = document.getElementById(sectionId);
             if (section) {
                 section.style.display = 'block';
+    
+                // Show or hide the header and welcome section based on the section
+                const header = document.querySelector('header');
+                const welcomeSection = document.getElementById('welcome');
+    
+                if (sectionId === 'about') {
+                    header.style.display = 'block';
+                    welcomeSection.style.display = 'block';
+                } else {
+                    header.style.display = 'none';
+                    welcomeSection.style.display = 'none';
+                }
             }
         }
     </script>
+    
     
 </body>
 </html>
