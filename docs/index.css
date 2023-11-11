@@ -290,3 +290,57 @@ h2 {
   font-size: 1.1em;
   margin-bottom: 10px;
 }
+
+/* Add this to your existing CSS */
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .animation {
+    display: none;
+  }
+
+  .about-summary-columns,
+  .skills-columns,
+  .education-columns,
+  .experience-columns {
+    flex-direction: column;
+  }
+
+  .about-summary-column,
+  .skills-column,
+  .education-column,
+  .experience-column {
+    width: 100%;
+  }
+
+  #about p {
+    width: 100%;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  nav a {
+    font-size: 14px;
+  }
+
+  .about-summary-column,
+  .skills-column,
+  .education-column,
+  .experience-column {
+    width: 48%;
+  }
+
+  #about p {
+    width: 48%;
+  }
+}
