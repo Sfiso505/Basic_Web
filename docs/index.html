@@ -24,36 +24,32 @@
         </nav>
     </div>
     <header>
-        <img src="Emmanuel.jpg" alt="Emmanuel Sifiso Nkosi" class="profile-image">
         <h1>Emmanuel Sifiso Nkosi</h1>
         <p>Data Scientist</p>
     </header>
 
     <section id="welcome">
         <h2>Welcome!</h2>
-        
         <!-- Welcome Paragraph -->
-        <p class="site-description">Thank you for reaching my site, this is where you can learn more about me and my tech journey.</p>
+        <p class="site-description">I am a skilled Data Scientist with a hands-on 5 months practical experience I gained through an intership by working with real-world projects, fostering my problem-solving and analytical skills in Data Analysisand Manipulation, Data Visualization, Predictive Modeling(Deep Learning & Machine Learning) and Natural Language Processing(Text and Audio), which has enabled me to deliver data-driven insights and solutions to businesses across various sectors.</p>
 
     </section>
     <section id="about">   
-        <!-- About Me and Summary Columns -->
-        <div class="about-summary-columns">
+        <!-- About Me and My goal Columns -->
+        <div class="about-goal-columns">
             <!-- About Me Column -->
-            <div class="about-summary-column">
+            <div class="about-column">
                 <h3>About Me</h3>
-                <p>
-                    My skills and educational background in IT System Development have equipped me with a solid understanding of technology frameworks and programming languages, fostering my problem-solving and analytical skills.
-                </p>
+                <p>My commitment extends beyond technical expertise; I am dedicated to leveraging the power of data to make a meaningful impact. Excited about the prospect of collaborating, learning, and making a positive impact through the fascinating world of data.</p>
+                
             </div>
     
-            <!-- Summary Column -->
-            <div class="about-summary-column">
-                <h3>Summary</h3>
-                <p>
-                    Furthermore, my accredited Data Science certificate has empowered me with the ability to derive valuable insights from complex datasets, illustrating my proficiency in data manipulation, visualization, and predictive modeling.
-                </p>
+            <!-- My goal Column -->
+            <div class="goal-column">
+                <h3>My goals</h3>
+                <p>I'm aiming to continually explore and master the ever-evolving landscape of artificial intelligence. I aspire to contribute innovative solutions, harnessing the power of machine learning to address complex challenges. Committed to a journey of continuous learning, I aim to stay at the forefront of cutting-edge technologies, shaping a future where machine learning transforms possibilities into realities</p>
             </div>
+            <div class="clear"></div>
         </div>
     </section>
     
@@ -64,7 +60,7 @@
             <!-- Data Science Intern at BCX -->
             <div class="experience-column">
                 <h3>Data Science Intern // BCX (Business Connexion)</h3>
-                <p><strong>August 2023 - current (programme expected to end Nov 2023)</strong></p>
+                <p><strong>August 2023 - Nov 2023</strong></p>
                 <ul>
                     <li>Processed and analyzed large datasets to extract valuable insights.</li>
                     <li>Developed and deployed deep learning models for NLP Speech Sentiment Analysis.</li>
@@ -111,6 +107,7 @@
                     <li>Teamwork</li>
                     <li>Communication</li>
                     <li>Time management</li>
+                    <li>Interpersonal skills</li>
                 </ul>
             </div>
     
@@ -124,17 +121,20 @@
                     <li>Data Visualization</li>
                     <li>Data Preprocessing</li>
                     <li>Machine Learning</li>
+                    <li>Data Manipulation</li>
                 </ul>
             </div>
     
             <!-- Tools/Resources Column -->
             <div class="skills-column">
-                <h3>Tools/Resources</h3>
+                <h3>Resources</h3>
                 <ul>
-                    <li>Python Programming</li>
-                    <li>SQL</li>
-                    <li>Microsoft Power BI</li>
-                    <li>GitHub</li>
+                    <li>Programming Languages: Python, SQL</li>
+                    <li>Data Visualization: Matplotlib, Seaborn, Numpy, Microsoft Power BI</li>
+                    <li>Machine Learning: Regression, Classification</li>
+                    <li>Version Control: GitHub, Gitlab</li>
+                    <li>Cloud: AWS (EC2 Instances)</li>
+                    <li>Web Development: HTML, CSS</li>
                 </ul>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 <div class="education-column">
                     <h3>Data Science NQF 5</h3>
                     <p><strong>EXPLORE AI Academy</strong></p>
-                    <p>Jan 2023 - current (programme expected to end Nov 2023)</p>
+                    <p>Jan 2023 - current Aug 2023</p>
                     <ul>
                         <li>Data visualization</li>
                         <li>Python and SQL for Data Science</li>
@@ -221,7 +221,8 @@
         
 
         <section id="contacts" style="display: none;">
-            <h2>Get int touch</h2>
+            <img src="Black.jpg" alt="Emmanuel Sifiso Nkosi" class="profile-image">
+            <h2>Reach out</h2>
             <ul>
                 <li>
                     <i class="fas fa-envelope"></i> Email: westinarea11@gmail.com
@@ -238,34 +239,7 @@
     <footer>
         <p>&copy; 2023 Emmanuel, South Africa</p>
     </footer>
-
-    <script>
-        function showSection(sectionId) {
-            const sections = document.getElementsByTagName('section');
-            for (let i = 0; i < sections.length; i++) {
-                sections[i].style.display = 'none';
-            }
-    
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.style.display = 'block';
-    
-                // Show or hide the header and welcome section based on the section
-                const header = document.querySelector('header');
-                const welcomeSection = document.getElementById('welcome');
-    
-                if (sectionId === 'about') {
-                    header.style.display = 'block';
-                    welcomeSection.style.display = 'block';
-                } else {
-                    header.style.display = 'none';
-                    welcomeSection.style.display = 'none';
-                }
-            }
-        }
-    </script>
-    
-    
+    <script src="index.js"></script>    
 </body>
 </html>
 

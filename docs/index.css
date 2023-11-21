@@ -17,23 +17,42 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 30px 0;
-  background-color: #444;
+  background-color: rgba(68, 68, 68, 0.8); /* Semi-transparent background */
   color: #fff;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text within the header */
+  padding: 15px 10px;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+h1, p {
+  margin: 0;
 }
+
+.profile-image {
+  width: 250px;
+  height: 200px;
+  border-radius: 45%;
+  object-fit: cover;
+  float: right;
+  margin-right: 150px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+  transform: rotate(360deg) scale(1.1); /* Adjust the rotation angle and scale factor as needed */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties as needed */
+}
+
 
 nav {
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 5px; /* Add margin to separate from the next section */
+  margin-bottom: 5px;
+  overflow: hidden; /* Hide overflow for the wave effect */
 }
 
 nav ul {
@@ -45,11 +64,42 @@ nav ul {
 
 nav ul li {
   margin: 0 15px;
+  position: relative;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: black;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul li:hover {
+  transform: scale(1.1); /* Enlarge the item on hover */
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Add the wave effect on hover */
+nav ul li:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #007bff, #fff);
+  transform-origin: 50% 100%;
+  transform: scaleY(0);
+  animation: wave 0.5s ease-in-out forwards;
+}
+
+@keyframes wave {
+  to {
+    transform: scaleY(1);
+  }
 }
 
 
@@ -98,19 +148,6 @@ footer {
   color: #fff;
 }
 
-.profile-image {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the content horizontally */
-}
 
 h2 {
   font-size: 2em;
@@ -146,35 +183,50 @@ h2 {
     margin-bottom: 20px;
 }
 
-.about-summary-columns {
-    display: flex;
-    justify-content: space-between;
+
+#about {
+  background-color: rgba(68, 68, 68, 0.8); /* Background color for the "About Me" section */
+}
+/* Add this to your existing CSS */
+.about-column,
+.goal-column {
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 
-.about-summary-column {
-    width: 48%; /* Adjust the width of each column as needed */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
+.about-column h3,
+.goal-column h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px; /* Adjust the margin as needed */
+  color: #444;
 }
 
-.about-summary-column h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #444;
+.about-column p,
+.goal-column p {
+  font-size: 1.1em;
+  margin-bottom: 5px; /* Adjust the margin as needed */
 }
 
-.about-summary-column p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+.about-column {
+  float: left; /* Align "About Me" to the left */
 }
 
-#about p {
-  width: 48%; /* Adjust the width of each column as needed */
-  margin-bottom: 10px; /* Add some spacing between paragraphs */
-  display: block; /* Ensure each paragraph is treated as a block element */
+.goal-column {
+  float: right; /* Align "My Goals" to the right */
 }
+
+.clear {
+  clear: both; /* Add this clearing element */
+}
+
+
+
+/* Your existing styles */
+/* ... (rest of the CSS remains unchanged) */
+
 
 /* Add the following styles for the three columns under the Skills section */
 #skills {
@@ -211,9 +263,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-#education {
-  /* Add any existing styles for the Education section */
-}
 
 .education-columns {
   display: flex;
@@ -344,3 +393,219 @@ h2 {
     width: 48%;
   }
 }
+
+/* Add this to your existing CSS */
+
+#skills {
+  background-color: rgba(68, 68, 68, 0.8); /* Background color for the "Skills" section */
+}
+
+.skills-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-column {
+  width: 30%; /* Adjust the width of each column as needed */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.skills-column h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.skills-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-column li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+/* Add this to your existing CSS */
+/* Add this to your existing CSS */
+
+#experience {
+  background-color: rgba(68, 68, 68, 0.8); /* Background color for the "Experience" section */
+}
+
+.experience-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-column {
+  width: 30%; /* Adjust the width of each column as needed */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.experience-column h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.experience-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-column li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+#education {
+  background-color: rgba(68, 68, 68, 0.8); /* Background color for the "Education" section */
+}
+
+.education-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-column {
+  width: 30%; /* Adjust the width of each column as needed */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.education-column h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.education-column p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.education-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-column li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+/* Add this to your existing CSS */
+/* Add this to your existing CSS */
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+  background-color: rgba(68, 68, 68, 0.8); /* Background color for each navigation item */
+  border-radius: 15px;
+  padding: 3px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  display: block; /* Make the entire area clickable */
+  padding: 10px; /* Add padding for better visibility */
+}
+
+nav ul li:hover {
+  transform: scale(1.1); /* Enlarge the item on hover */
+  background-color: rgba(68, 68, 68, 1); /* Change background color on hover */
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+
+#projects {
+  background-color: rgba(68, 68, 68, 0.8); /* Background color for the "Projects" section */
+}
+
+.project {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 10px;
+}
+
+.project h3 {
+  font-size: 1.5em;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.project ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+#projects a {
+  color: #007bff;
+}
+
+#contacts {
+  background-color: rgba(68, 68, 68, 0.8); /* Background color for the "Contacts" section */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#contacts h2 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#contacts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contacts li {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#contacts li i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+#contacts a {
+  color: #007bff;
+}
+
+
+
