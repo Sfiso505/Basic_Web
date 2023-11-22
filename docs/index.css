@@ -43,9 +43,11 @@ h1, p {
 }
 
 .profile-image:hover {
-  transform: rotate(360deg) scale(1.1); /* Adjust the rotation angle and scale factor as needed */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties as needed */
+  transform: scale(1.1); /* Zoom in effect on hover */
+  box-shadow: 0 0 20px #007bff; /* Glow effect on hover */
 }
+
+
 
 
 nav {
@@ -607,5 +609,50 @@ nav ul li a:hover {
   color: #007bff;
 }
 
+#contacts {
+  text-align: left;
+}
 
+#contacts {
+  text-align: left;
+}
+
+.download-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
+  color: #000; /* Black text color */
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Center items horizontally */
+  text-align: center; /* Center-align text within the footer */
+}
+
+#clock {
+  font-size: 24px;
+  margin-left: 950px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px; 
+}
+
+#clock {
+  font-size: 1.5rem; /* Adjust the font size using a relative unit */
+  margin-left: 20px; /* Adjust the left margin for better positioning */
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif; /* Apply a different font family */
+  font-weight: bold;
+  color: ghostwhite;
+  text-shadow: 0 0 10px black;
+}
+
+
+p {
+  margin: 0; /* Remove default margin for the paragraph */
+}
 

@@ -1,0 +1,5 @@
+1. Image transition
+2. Add Github link
+3. Optimization for mobile
+3. Digital clock
+5. Resume Download
